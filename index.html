@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Monotree Replica for club</title>
+  <meta name="description" content="Landing page clone of monotree.dk for demo / learning purposes" />
+  <style>
+    :root{
+      --accent:#0b6b5a;
+      --dark:#0f1720;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --container:1200px;
+      --radius:12px;
+      --gap:24px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;color:var(--dark);background:var(--bg);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--container);margin:0 auto;padding:40px 20px}
+    /* NAV */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:42px;height:42px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#1da085);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    .cta{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;padding:40px 0}
+    .eyebrow{color:var(--muted);font-weight:600}
+    h1{font-size:44px;line-height:1.02;margin:12px 0}
+    p.lead{color:var(--muted);max-width:60ch}
+    .stats{display:flex;gap:16px;margin-top:18px}
+    .stat{background:#f8fafb;padding:10px 14px;border-radius:10px;text-align:center}
+    .panel{background:#0f172024;border-radius:14px;padding:18px}
+
+    /* FEATURES */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px 0}
+    .feature-card{background:#fff;border:1px solid #eef2f5;padding:18px;border-radius:12px}
+    .logos{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .logos img{height:34px;opacity:.85}
+
+    /* TESTIMONIALS & FOOTER */
+    .testimonials{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:36px 0}
+    blockquote{background:#f8fafb;padding:18px;border-radius:12px;margin:0}
+    footer{border-top:1px solid #eef2f5;padding:28px 0;margin-top:40px;color:var(--muted)}
+
+    /* cookie banner */
+    .cookie{position:fixed;right:16px;bottom:16px;background:white;padding:16px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,.08);max-width:380px;border:1px solid #eef2f5}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .testimonials{grid-template-columns:1fr}
+    }
+    @media (max-width:520px){
+      .features{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="brand">
+    
+      <div>
+        <div style="font-weight:700">Monotree</div>
+        
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#why">Why us?</a></li>
+        <li><a href="#cases">Cases</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a class="cta" href="#book">Book a demo</a>
+      <div style="font-size:14px;color:var(--muted)">English ▾</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1>Put People First</h1>
+        <p>Fast, user-friendly and engaging — transform HR into
+people and culture, and streamline your daily operations
+with your own branded app.</p>
+        <div class="stats">
+          <div class="stat"><strong>4.9</strong><div style="font-size:12px;color:var(--muted)">Average user rating</div></div>
+          <div class="stat"><strong>75.2%</strong><div style="font-size:12px;color:var(--muted)">Average daily activity</div></div>
+          <div class="stat"><strong>4.2</strong><div style="font-size:12px;color:var(--muted)">Avg app opens/day</div></div>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <h3 style="margin:0 0 8px 0">Our AI Chat Bot is here</h3>
+        <p style="margin:0 0 12px;color:var(--muted)">How do I clean the coffee machine</p>
+        <div style="background:#fff;border-radius:10px;padding:12px;border:1px solid #eef2f5">
+          <strong>How do I clean the coffee machine?</strong>
+          <ol style="margin:8px 0 0 18px;color:var(--muted)"><li>Empty the filter</li><li>Remove old water</li><li>Press the power button</li></ol>
+        </div>
+      </aside>
+    </section>
+
+    <section id="product">
+      <h2>Product highlights</h2>
+      <div class="features">
+        <div class="feature-card">
+          <h4>Communication & Social</h4>
+          <p style="color:var(--muted)">Chats, social walls and events to keep teams connected.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Onboarding & Training</h4>
+          <p style="color:var(--muted)">Courses, handbooks and multimedia onboarding.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Daily Operations</h4>
+          <p style="color:var(--muted)">To‑do lists, forms and checklists for daily tasks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases">
+      <h2>Trusted by</h2>
+      <div class="logos" aria-hidden="true">
+        <!-- Replace src with real logo files -->
+        <img src="https://via.placeholder.com/120x40?text=Cafe" alt="Cafe Vivaldi">
+        <img src="https://via.placeholder.com/120x40?text=Madklubben" alt="Madklubben">
+        <img src="https://via.placeholder.com/120x40?text=3.dk" alt="3.dk">
+        <img src="https://via.placeholder.com/120x40?text=Gasoline" alt="Gasoline Grill">
+        <img src="https://via.placeholder.com/120x40?text=Faarup" alt="Faarup">
+        <img src="https://via.placeholder.com/120x40?text=Guldsmeden" alt="Guldsmeden Hotels">
+      </div>
+    </section>
+
+    <section>
+      <h2>What do our customers say?</h2>
+      <div class="testimonials">
+        <blockquote>
+          <p>“Monotree helped create a community across our restaurants... it's great to collaborate.”</p>
+          <footer style="font-size:13px;color:var(--muted)">Mia Birk — Restaurantchef, Madklubben</footer>
+        </blockquote>
+        <blockquote>
+          <p>“We launched our app in the autumn of 2021 and I honestly cannot understand how we could run our business beforehand.”</p>
+          <footer style="font-size:13px;color:var(--muted)">Karina Harbo Jensen — CMO</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section style="margin-top:28px;padding:18px;border-radius:12px;background:#f8fafb;display:flex;justify-content:space-between;align-items:center">
+      <div>
+        <h1>The right information to the right people</h1>
+        <div style="color:var(--muted)">ー
+Direct your content precisely where it matters using
+our powerful targeting system.</div>
+      </div>
+      
+    </section>
+
+  </main>
+
+  <footer class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
+      <div>
+        <div style="font-weight:700">Monotree ApS</div>
+        <div style="font-size:13px;color:var(--muted)">ISAE 3000 certified · 2025 © Monotree ApS</div>
+      </div>
+      <div style="color:var(--muted)">contact@monotree.com · +45 3111 0003</div>
+    </div>
+  </footer>
+
+  <div class="cookie" id="cookie">
+    <div style="font-weight:700">Cookies usage</div>
+    <div style="color:var(--muted);margin-top:6px">We use cookies to enhance your experience.</div>
+    <div style="display:flex;gap:8px;margin-top:10px;justify-content:flex-end">
+      <button onclick="decline()" style="background:transparent;border:1px solid #e5e7eb;padding:8px;border-radius:8px">Reject all</button>
+      <button onclick="accept()" style="background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;border:0">Accept</button>
+    </div>
+  </div>
+
+  <script>
+    // Minimal interactivity: cookie handling + simple hash navigation
+    function accept(){localStorage.setItem('monotree_cookie','accepted');document.getElementById('cookie').style.display='none'}
+    function decline(){localStorage.setItem('monotree_cookie','declined');document.getElementById('cookie').style.display='none'}
+    (function(){if(localStorage.getItem('monotree_cookie')) document.getElementById('cookie').style.display='none'})()
+
+    // Smooth scroll for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t) t.scrollIntoView({behavior:'smooth'});}))
+  </script>
+</body>
+</html>
