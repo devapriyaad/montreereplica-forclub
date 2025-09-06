@@ -59,6 +59,29 @@
       .features{grid-template-columns:1fr}
       nav ul{display:none}
     }
+    .logos-wrapper {
+  overflow: hidden;
+  width: 100%;
+  border-top: 1px solid #eef2f5;
+  border-bottom: 1px solid #eef2f5;
+  padding: 12px 0;
+}
+
+.logos-track {
+  display: flex;
+  gap: 24px;
+  animation: scroll 20s linear infinite;
+}
+
+.logos-track img {
+  height: 40px;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
   </style>
 </head>
 <body>
@@ -114,31 +137,44 @@ with your own branded app.</p>
       <div class="features">
         <div class="feature-card">
           <h4>Communication & Social</h4>
-          <p style="color:var(--muted)">Chats, social walls and events to keep teams connected.</p>
+          <p style="color:var(--muted)">A fully functional social network
+fosters collaboration and fun in your
+workplace community.</p>
         </div>
         <div class="feature-card">
           <h4>Onboarding & Training</h4>
-          <p style="color:var(--muted)">Courses, handbooks and multimedia onboarding.</p>
+          <p style="color:var(--muted)">Efficient, media rich and intuitive
+development of the people in your
+organization.</p>
         </div>
         <div class="feature-card">
-          <h4>Daily Operations</h4>
-          <p style="color:var(--muted)">To‑do lists, forms and checklists for daily tasks.</p>
+          <h4>Well being and Retention</h4>
+          <p style="color:var(--muted)">Give everyone a voice, measure their
+well-being, and retain your talent.</p>
         </div>
       </div>
     </section>
 
     <section id="cases">
-      <h2>Trusted by</h2>
-      <div class="logos" aria-hidden="true">
-        <!-- Replace src with real logo files -->
-        <img src="https://via.placeholder.com/120x40?text=Cafe" alt="Cafe Vivaldi">
-        <img src="https://via.placeholder.com/120x40?text=Madklubben" alt="Madklubben">
-        <img src="https://via.placeholder.com/120x40?text=3.dk" alt="3.dk">
-        <img src="https://via.placeholder.com/120x40?text=Gasoline" alt="Gasoline Grill">
-        <img src="https://via.placeholder.com/120x40?text=Faarup" alt="Faarup">
-        <img src="https://via.placeholder.com/120x40?text=Guldsmeden" alt="Guldsmeden Hotels">
-      </div>
-    </section>
+  <div class="logos-wrapper">
+    <div class="logos-track">
+      <img src="https://via.placeholder.com/120x40?text=Cafe" alt="logo1">
+      <img src="https://via.placeholder.com/120x40?text=Madklubben" alt="logo2">
+      <img src="https://via.placeholder.com/120x40?text=3.dk" alt="logo3">
+      <img src="https://via.placeholder.com/120x40?text=Gasoline" alt="logo4">
+      <img src="https://via.placeholder.com/120x40?text=Faarup" alt="logo5">
+      <img src="https://via.placeholder.com/120x40?text=Guldsmeden" alt="logo6">
+      
+      <img src="https://via.placeholder.com/120x40?text=Cafe" alt="logo1">
+      <img src="https://via.placeholder.com/120x40?text=Madklubben" alt="logo2">
+      <img src="https://via.placeholder.com/120x40?text=3.dk" alt="logo3">
+      <img src="https://via.placeholder.com/120x40?text=Gasoline" alt="logo4">
+      <img src="https://via.placeholder.com/120x40?text=Faarup" alt="logo5">
+      <img src="https://via.placeholder.com/120x40?text=Guldsmeden" alt="logo6">
+    </div>
+  </div>
+</section>
+
 
     <section>
       <h1>What do our customers say?</h1>
